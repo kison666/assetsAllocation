@@ -1,0 +1,115 @@
+$blue: #3190e8;
+$bc: #e4e4e4;
+$fc:#fff;
+$black:#000;
+$black1:#111;
+$black2:#2f2f2f;
+$grey0:#333333;
+$grey:#3a3a3a;
+$grey1:#393A3F;
+$grey2:#666;
+$grey3:#999;
+$grey4:#3a3a3a;
+$lineGrey:#cccccc;
+$lineGrey2:#999999;
+$lineGrey3:#666666;
+$lineGrey4:#444444;
+$lineGrey5:#333333;
+$fontColor:#e0e0e0;
+$fontGreyColor:#cccccc;
+$fontGreyColor2:#999999;
+$fontBlackColor:#333333;
+$white:#e0e0e0;
+$containerTop:0rem;
+$containerTop1:.05rem;
+$red:#FF4A37;
+$green:#32A224;
+$borderColor:#333333;
+$borderColor1:#444444;
+$color1:#0DA4D2;
+$color2:#F05455;
+$color3:#FEBE07;
+$color4:#AE66D6;
+$color5:#3B66CF;
+$color6:#92C73B;
+$color7:#659050;
+$color8:#00BFFF;
+$color9:#8A2BE2;
+$color10:#EEE8AA;
+$color11:#7FFFAA;
+$color12:#ADD8E6;
+$color13:#666666;
+$gold:#efb71f;
+
+// 背景图片地址和大小
+@mixin bis($url) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+@mixin borderRadius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+//定位全屏
+@mixin allcover {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+//定位上下左右居中
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+//定位上下居中
+@mixin ct {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+//定位左右居中
+@mixin cl {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+//定位上下居中居右
+@mixin cr {
+    position: absolute;
+    right: 0%;
+    transform: translateX(-50%);
+}
+//宽高
+@mixin wh($width, $height) {
+    width: $width;
+    height: $height;
+}
+//字体大小、行高、字体
+@mixin font($size, $line-height, $family: 'Microsoft YaHei') {
+    font: #{$size}/#{$line-height} $family;
+}
+//字体大小，颜色
+@mixin sc($size, $color) {
+    font-size: $size;
+    color: $color;
+}
+//字体大小
+@mixin s($size) {
+    font-size: $size;
+}
+//flex 布局和 子元素 对其方式
+@mixin fj($type: space-between) {
+    display: flex;
+    justify-content: $type;
+}
+//字体和边框颜色同步
+@mixin qcb($color) {
+    border-color: $color;
+    color: $color;
+}
